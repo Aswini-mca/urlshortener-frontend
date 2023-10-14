@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 
 //home component
 function Home() {
+  const logout =()=>{
+    localStorage.removeItem("token")
+  }
   return (
     <div className='top'>
       <div className='container-fluid bg-secondary'>
@@ -14,13 +17,14 @@ function Home() {
             <Link style={{ color: "black" }} className="nav-link active" aria-current="page" to="/registration">Registration</Link>
           </li>
           <li class="nav-item">
-            <Link style={{ color: "black" }} className="nav-link active" aria-current="page" to="/login">Logout</Link>
+            <Link style={{ color: "black" }} className="nav-link active" aria-current="page" to="/login" onClick={logout}>Logout</Link>
           </li>
         </ul>
       </div>
       <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDB_iv_SY6yqLkvMCwSYlb_2tmt1qlB2-l_g&usqp=CAU' alt='' />
-      <p className='container mt-3'>URL shortening is a technique on the World Wide Web in which a Uniform Resource Locator (URL) may be made substantially shorter and still direct to the required page. This is achieved by using a redirect which links to the web page that has a long URL.</p>
-
+      <p className='container mt-3'>URL shortening is a technique on the World Wide Web in which a Uniform Resource Locator (URL) may be made substantially shorter and still direct to the required page.
+      This is achieved by using a redirect which links to the web page that has a long URL.</p>
+      <h6>Please register! in this site then only you can able to short your long URL..</h6>
     </div>
   )
 }

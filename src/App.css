@@ -1,4 +1,14 @@
 .top{
   text-align: center;
 }
-
+.top-forget {
+  display: flex;
+  justify-content: space-evenly;
+}
+.error{
+  color: red;
+}
+.success{
+  text-align: center;
+  color: green;
+}

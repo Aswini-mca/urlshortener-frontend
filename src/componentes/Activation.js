@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { API } from '../global'
 
@@ -23,8 +23,9 @@ function Activation() {
             setMessage(data.message)
         }
     }
-    active()
-    // useEffect(() => active(), [])
+    useEffect(()=>{
+        active()
+    },[])
     return (
         <div>
             <div className='container-fluid bg-secondary'>
@@ -39,9 +40,8 @@ function Activation() {
             </div>
             <div className='container mt-3 text-center' >
                 <h3 className='container'>Activation page</h3>
-                {error ? <p>{error}</p> : ""}
-                {message ? <p>{message}</p> : ""}
-                {message ? alert("User Account Activated Successfully") : ""}
+                {error ? <p className='error'>{error}❗️</p> : ""}
+                {message ? <h4>{message} ✅ please click Login to continue.</h4> : ""}
             </div>
         </div>
     )
