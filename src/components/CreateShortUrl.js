@@ -39,6 +39,7 @@ function CreateShortUrl() {
             navigate('/login', { replace: true });
         }
     }, [])
+
     return (
         <div>
             <h4 className='container-fluid bg-secondary text-center p-1'>URL Shortner App</h4>
