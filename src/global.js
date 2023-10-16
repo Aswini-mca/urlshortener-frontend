@@ -1,1 +1,1 @@
-export const API = "http://localhost:9000"
+export const API = "https://urlshortener-backend-jbl4.onrender.com"
