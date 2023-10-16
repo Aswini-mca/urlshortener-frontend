@@ -43,7 +43,7 @@ function Registration() {
   return (
     <div>
       <h4 className='container-fluid bg-secondary text-center p-1'>URL Shortner App</h4>
-      <div className='text-center'>
+      <div className='text-center fw-bold'>
         <Link style={{ color: "black" }} aria-current="page" to="/">Home</Link>
       </div>
       <div className='container mt-3'>
@@ -81,9 +81,9 @@ function Registration() {
           onChange={(e) => setPassword(e.target.value)}
         />
         <button type="submit" className="btn btn-primary mt-3" onClick={handlesignup}>Submit</button>
-        {error ? <p className='error'>{error}❗️</p> : ""}
+        {error ? <p className='error mt-2'>{error}❗️</p> : ""}
         {message ? <p className='success'>{message}✅</p> : ""}
-        {message ? <Link style={{ color: "black" }} className='nav' aria-current="page" to={`/activation/${token}`}> Account Activate Link</Link> : ""}
+        {message ? <Link style={{ color: "black" }} className='fw-bold text-primary text-center' aria-current="page" to={`/activation/${token}`}> Account Activate Link</Link> : ""}
       </div>
     </div>
   )

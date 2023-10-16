@@ -36,11 +36,11 @@ function ForgetPassword() {
   }
   return (
     <div>
-      <h4 className='container-fluid bg-secondary text-center p-1'>URL Shortner App</h4>
+      <h4 className='container-fluid bg-secondary text-center p-1'>URL Shortener App</h4>
       <div className='container'>
-        <div className='top-forget mt-4'>
+        <div className='d-flex justify-content-around mt-4'>
           <h2 className='container'>Forget Password?</h2>
-          <Link style={{ color: "black" }} className='nav' aria-current="page" to="/">Home</Link>
+          <Link style={{ color: "black" }} className='fw-bold' aria-current="page" to="/">Home</Link>
         </div>
         <p>Please enter your registered email address we will get back to you with the reset password link</p>
         <label for="email" class="form-label">Email Address</label>
@@ -52,9 +52,9 @@ function ForgetPassword() {
           onChange={(e) => setEmail(e.target.value)}
         />
         <button type="submit" className="btn btn-primary mt-3" onClick={handlesubmit}>Submit</button>
-        {error ? <p className='error'>{error}❗️</p> : ""}
+        {error ? <p className='error mt-2'>{error}❗️</p> : ""}
         {message ? <p className='success'>{message}✅</p> : ""}
-        {message ? <Link style={{ color: "black" }} className='nav' aria-current="page" to={`/reset-password/${resetToken}`}>Reset Password Link</Link> : ""}
+        {message ? <Link style={{ color: "black" }} className='fw-bold text-primary text-center' aria-current="page" to={`/reset-password/${resetToken}`}>Reset Password Link</Link> : ""}
       </div>
     </div>
   )

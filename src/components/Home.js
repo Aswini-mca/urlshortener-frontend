@@ -3,24 +3,14 @@ import { Link } from 'react-router-dom'
 
 //home component
 function Home() {
-  const logout =()=>{
-    localStorage.removeItem("token")
-  }
+  
   return (
     <div className='top'>
-      <div className='container-fluid bg-secondary'>
-        <ul class="nav justify-content-center">
-          <li class="nav-item">
-            <Link style={{ color: "black" }} className="nav-link active" aria-current="page" to="/login">Login</Link>
-          </li>
-          <li class="nav-item">
-            <Link style={{ color: "black" }} className="nav-link active" aria-current="page" to="/registration">Registration</Link>
-          </li>
-          <li class="nav-item">
-            <Link style={{ color: "black" }} className="nav-link active" aria-current="page" to="/login" onClick={logout}>Logout</Link>
-          </li>
-        </ul>
-      </div>
+      <h4 className='container-fluid bg-secondary text-center p-1'>Url Shortener App</h4>
+            <div className='d-flex justify-content-around fw-bold'>
+                <Link style={{ color: "black" }} aria-current="page" to="/login">Login</Link>
+                <Link style={{ color: "black" }} aria-current="page" to="/registration">Register</Link>
+            </div>
       <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDB_iv_SY6yqLkvMCwSYlb_2tmt1qlB2-l_g&usqp=CAU' alt='' />
       <p className='container mt-3'>URL shortening is a technique on the World Wide Web in which a Uniform Resource Locator (URL) may be made substantially shorter and still direct to the required page.
       This is achieved by using a redirect which links to the web page that has a long URL.</p>
