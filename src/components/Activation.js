@@ -28,20 +28,14 @@ function Activation() {
     },[])
     return (
         <div>
-            <div className='container-fluid bg-secondary'>
-                <ul class="nav justify-content-center">
-                    <li class="nav-item">
-                        <Link style={{ color: "black" }} className="nav-link active" aria-current="page" to="/login">Login</Link>
-                    </li>
-                    <li class="nav-item">
-                        <Link style={{ color: "black" }} className="nav-link active" aria-current="page" to="/">Home</Link>
-                    </li>
-                </ul>
+            <h4 className='container-fluid bg-secondary text-center p-1'>Url Shortener App</h4>
+            <div className='container text-center fw-bold'>
+                <Link style={{ color: "black" }} aria-current="page" to="/">Home</Link>
             </div>
             <div className='container mt-3 text-center' >
-                <h3 className='container'>Activation page</h3>
+                <h3 className='container text-success'>Activation page</h3>
                 {error ? <p className='error'>{error}❗️</p> : ""}
-                {message ? <h4>{message} ✅ please click Login to continue.</h4> : ""}
+                {message ? <h4>{message} ✅ please click <Link style={{ color: "black" }} aria-current="page" to="/login" className='text-primary'>Login</Link> to continue.</h4> : ""}
             </div>
         </div>
     )

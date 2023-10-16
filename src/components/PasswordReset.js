@@ -33,11 +33,11 @@ function PasswordReset() {
     }
     return (
         <div>
-            <h4 className='container-fluid bg-secondary text-center p-1'>URL Shortner App</h4>
+            <h4 className='container-fluid bg-secondary text-center p-1'>URL Shortener App</h4>
             <div className='container'>
-                <div className='top-forget'>
+                <div className='d-flex justify-content-around mt-4'>
                     <h2 className='container'>Reset Account Password</h2>
-                    <Link style={{ color: "black" }} className='nav' aria-current="page" to="/login">Login</Link>
+                    <Link style={{ color: "black" }} className='fw-bold' aria-current="page" to="/">Home</Link>
                 </div>
                 <label for="password" class="col-form-label">Password</label>
                 <input type="password"
@@ -56,8 +56,8 @@ function PasswordReset() {
                     onChange={(e) => setConfirmPassword(e.target.value)}
                 />
                 <button type="submit" className="btn btn-primary mt-3" onClick={handlesubmit}>Reset Password</button>
-                {error ? <p className='error'>{error}❗️</p> : ""}
-                {message ? <p className='success'>{message}✅ please click login</p> : ""}
+                {error ? <p className='error mt-2'>{error}❗️</p> : ""}
+                {message ? <p className='success'>{message}✅ please click <Link style={{ color: "black" }} aria-current="page" to="/login" className='text-primary'>Login</Link></p> : ""}
             </div>
         </div>
     )

@@ -42,7 +42,7 @@ function Registration() {
   }
   return (
     <div>
-      <h4 className='container-fluid bg-secondary text-center p-1'>URL Shortner App</h4>
+      <h4 className='container-fluid bg-secondary text-center p-1'>URL Shortener App</h4>
       <div className='text-center fw-bold'>
         <Link style={{ color: "black" }} aria-current="page" to="/">Home</Link>
       </div>

@@ -64,7 +64,7 @@ function CreatedUrls() {
                                         <td>{index+1}</td>
                                         <td>{url.longUrl}</td>
                                         <td>{url.shortUrl}</td>
-                                        <td key={index}><a href={`${url.longUrl}`} target="_blank" onClick={() => { updateCount(url) }} rel="noreferrer">{`http://localhost:9000/${url.shortUrl}`}</a></td>
+                                        <td key={index}><a href={`${url.longUrl}`} target="_blank" onClick={() => { updateCount(url) }} rel="noreferrer">{`https://urlshortener-backend-jbl4.onrender.com/${url.shortUrl}`}</a></td>
                                         <td>{url.clickCount}</td>
                                     </tr>
                                 );
