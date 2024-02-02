@@ -63,8 +63,8 @@ function Login() {
           onChange={(e) => setPassword(e.target.value)}
         />
         <button type="submit" className="btn btn-primary mt-3" onClick={handlelogin}>Login</button>
-        {error ? <p className='error mt-2'>{error}❗️</p> : ""}
-        {message ? <p className='success'>{message}✅</p> : ""}
+        {error ? <p className='error mt-2 m-4'>{error}❗️</p> : ""}
+        {message ? <p className='success m-4'>{message}✅</p> : ""}
       </div>
     </div>
   )

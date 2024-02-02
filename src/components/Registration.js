@@ -35,6 +35,7 @@ function Registration() {
     }
     if (data.message) {
       setMessage(data.message)
+      setError('')
     }
     if (data.token) {
       setToken(data.token)
@@ -78,11 +79,12 @@ function Registration() {
           id="password"
           placeholder="Enter your password"
           value={password}
+          title='For strong Password min of 8 chars combo(A-Za-z0-9)1 special char'
           onChange={(e) => setPassword(e.target.value)}
         />
         <button type="submit" className="btn btn-primary mt-3" onClick={handlesignup}>Submit</button>
-        {error ? <p className='error mt-2'>{error}❗️</p> : ""}
-        {message ? <p className='success'>{message}✅</p> : ""}
+        {error ? <p className='error mt-2 m-4'>{error}❗️</p> : ""}
+        {message ? <p className='success m-4'>{message}✅</p> : ""}
         {message ? <Link style={{ color: "black" }} className='fw-bold text-primary text-center' aria-current="page" to={`/activation/${token}`}> Account Activate Link</Link> : ""}
       </div>
     </div>

@@ -52,8 +52,8 @@ function ForgetPassword() {
           onChange={(e) => setEmail(e.target.value)}
         />
         <button type="submit" className="btn btn-primary mt-3" onClick={handlesubmit}>Submit</button>
-        {error ? <p className='error mt-2'>{error}❗️</p> : ""}
-        {message ? <p className='success'>{message}✅</p> : ""}
+        {error ? <p className='error mt-2 m-4'>{error}❗️</p> : ""}
+        {message ? <p className='success m-4'>{message}✅</p> : ""}
         {message ? <Link style={{ color: "black" }} className='fw-bold text-primary text-center' aria-current="page" to={`/reset-password/${resetToken}`}>Reset Password Link</Link> : ""}
       </div>
     </div>

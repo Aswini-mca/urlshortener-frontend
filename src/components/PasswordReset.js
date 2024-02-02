@@ -29,6 +29,7 @@ function PasswordReset() {
         }
         if (data.message) {
             setMessage(data.message)
+            setError('');
         }
     }
     return (
@@ -56,8 +57,8 @@ function PasswordReset() {
                     onChange={(e) => setConfirmPassword(e.target.value)}
                 />
                 <button type="submit" className="btn btn-primary mt-3" onClick={handlesubmit}>Reset Password</button>
-                {error ? <p className='error mt-2'>{error}❗️</p> : ""}
-                {message ? <p className='success'>{message}✅ please click <Link style={{ color: "black" }} aria-current="page" to="/login" className='text-primary'>Login</Link></p> : ""}
+                {error ? <p className='error mt-2 m-4'>{error}❗️</p> : ""}
+                {message ? <p className='success m-4'>{message}✅ please click <Link style={{ color: "black" }} aria-current="page" to="/login" className='text-primary'>Login</Link></p> : ""}
             </div>
         </div>
     )

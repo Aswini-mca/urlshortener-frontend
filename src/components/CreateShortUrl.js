@@ -28,6 +28,7 @@ function CreateShortUrl() {
         }
         if (data.message) {
             setMessage(data.message)
+            setError('')
         }
         if (data.shortUrl) {
             setShortUrl(data.shortUrl)

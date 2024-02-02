@@ -33,7 +33,8 @@ function Dashboard() {
 
     // Check if counts data is available before rendering the chart
     if (urls.length === 0) {
-        return <div>Loading...</div>;
+        return <div class="spinner-border text-secondary top m-5" role="status">
+        <span class="visually-hidden">Loading...</span> </div>;
     }
 
     const logout = () => {
